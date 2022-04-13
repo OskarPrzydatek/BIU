@@ -1,0 +1,4 @@
+export enum Actions {
+  REMOVE_COLOR = "REMOVE_COLOR",
+  CHANGE_COLOR_RATING = "CHANGE_COLOR_RATING",
+}
