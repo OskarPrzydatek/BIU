@@ -1,0 +1,24 @@
+.numbers-list {
+  display: flex;
+  justify-content: center;
+}
+
+.numbers-list__item {
+  margin-right: 0.3rem;
+}
+
+.numbers-list__item:last-child {
+  margin-right: 0;
+}
+
+.numbers-list__item::after {
+  content: ",";
+}
+
+.numbers-list__item:last-child::after {
+  content: "";
+}
+
+.no-elements-added {
+  margin-top: 0;
+}

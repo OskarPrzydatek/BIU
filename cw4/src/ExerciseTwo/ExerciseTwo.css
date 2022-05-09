@@ -1,0 +1,11 @@
+.exercise-two {
+  padding: 2%;
+}
+
+.exercise-two > * {
+  margin-bottom: 2%;
+}
+
+.exercise-two > *:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,9 @@
+.result-array {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.result-array th,
+td {
+  border: 1px solid black;
+}
