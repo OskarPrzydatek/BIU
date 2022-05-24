@@ -1,0 +1,31 @@
+.nav-bar {
+  position: relative;
+}
+
+.nav-bar__menu {
+  position: absolute;
+  top: 2rem;
+  margin: 0;
+  background: #fff;
+  border: 5px solid black;
+  padding: 2%;
+  width: 300%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-bar__menu > li {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-bar__menu > li > a {
+  display: block;
+  width: 100%;
+}
+
+.nav-bar__menu > li:hover {
+  background: #a3e2df;
+}

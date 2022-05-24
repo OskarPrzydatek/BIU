@@ -1,0 +1,11 @@
+.beleraus-map-4 {
+  width: 418px;
+  height: 372px;
+  border: 5px solid #6e9b99;
+  cursor: cell;
+}
+
+.beleraus-map-4 > img {
+  width: 100%;
+  height: 100%;
+}
