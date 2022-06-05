@@ -1,0 +1,16 @@
+.e-one-user-not-found {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.e-one-user-not-found__header {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.e-one-user-not-found__message {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,11 @@
+.e-one-user-profile-item {
+  line-height: 1.5;
+}
+
+.e-one-user-profile-item__label {
+  font-weight: bold;
+}
+
+.e-one-user-profile-item__value {
+padding: .5rem;
+}

@@ -1,0 +1,16 @@
+.e-one-generate-user-button--cleaner {
+  appearance: none;
+  border: none;
+  background: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+.e-one-generate-user-button {
+  padding: 3%;
+  font-size: 2rem;
+  background: var(--carbon-black);
+  color: var(--snow-white);
+  border-radius: 50px;
+  cursor: pointer;
+}

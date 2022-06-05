@@ -1,0 +1,25 @@
+.e-one-page-layout {
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.e-one-page-layout__header {
+  font-size: 3rem;
+}
+
+.e-one-page-layout__exercise {
+  margin-top: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.e-one-page-layout__content-wrapper {
+  width: 100%;
+  margin-top: 5%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

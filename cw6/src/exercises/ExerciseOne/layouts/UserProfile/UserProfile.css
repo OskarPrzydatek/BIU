@@ -1,0 +1,36 @@
+.e-one-user-profile {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.e-one-user-profile > *:first-child {
+  margin-right: 15%;
+}
+
+.e-one-user-profile__data-wrapper {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.e-one-user-profile__data-wrapper--items {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.e-one-user-profile__data-wrapper--items > * {
+  margin-bottom: 5%;
+}
+
+.e-one-user-profile__data-wrapper--items > *:first-child {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.e-one-user-profile__data-wrapper--items > *:last-child {
+  margin-bottom: 0;
+}
