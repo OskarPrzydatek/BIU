@@ -1,61 +1,40 @@
 import React from "react";
 
+import useMeals from "./hooks/useMeals";
+
+import PageLayout from "./layouts/PageLayout/PageLayout";
+import MealsList from "./components/MealsList/MealsList";
+import MealListItem from "./components/MealListItem/MealListItem";
+import MealDescription from "./layouts/MealDescription/MealDescription";
+import Loading from "./components/Loading/Loading";
+
+import { ExerciseTwoContent } from "./consts/exerciseContent";
+
 export default function ExerciseTwo() {
-  const [meals, setMeals] = React.useState();
-  const [mealDetails, setMealDetails] = React.useState();
-
-  React.useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
-      .then((result) => result.json())
-      .then((data) => setMeals(data.meals));
-  }, []);
-
-  const handleMealDetailsOnAPI = (id) => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-      .then((result) => result.json())
-      .then((data) => setMealDetails(data.meals[0]));
-  };
+  const meals = useMeals();
 
   return (
-    <section>
-      <h2>Zadanie 2</h2>
-
-      <article>
-        <h3>Sea Food</h3>
-        <ul>
-          {meals !== undefined ? (
-            <>
-              {meals.map(({ idMeal, strMeal, strMealThumb }) => (
-                <li key={idMeal} onClick={() => handleMealDetailsOnAPI(idMeal)}>
-                  <p>{strMeal}</p>
-                  <picture>
-                    <img src={strMealThumb} alt={`${strMeal} - ${idMeal}`} />
-                  </picture>
-
-                  {mealDetails && mealDetails.idMeal === idMeal && (
-                    <ul>
-                      <li>Area: {mealDetails.strArea}</li>
-                      <li>Category {mealDetails.strCategory}</li>
-                      <li>Tags: {mealDetails.strTags}</li>
-                      <li>
-                        <a
-                          href={mealDetails.strYoutube}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          YoutubeTutorial Here!
-                        </a>
-                      </li>
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </>
-          ) : (
-            <li key="loading">Loading</li>
-          )}
-        </ul>
-      </article>
-    </section>
+    <PageLayout
+      title={ExerciseTwoContent.PAGE_LAYOUT_TITLE}
+      exerciseContent={ExerciseTwoContent.EXERCISE_CONTENT}
+    >
+      <MealsList title={ExerciseTwoContent.MEALS_LIST_TITLE}>
+        {meals !== undefined ? (
+          <>
+            {meals.map(({ idMeal, strMeal, strMealThumb }) => (
+              <MealListItem
+                key={`${idMeal}-${strMeal}`}
+                strMeal={strMeal}
+                strMealThumb={strMealThumb}
+              >
+                <MealDescription idMeal={idMeal} strMeal={strMeal} />
+              </MealListItem>
+            ))}
+          </>
+        ) : (
+          <Loading />
+        )}
+      </MealsList>
+    </PageLayout>
   );
 }
